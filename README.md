@@ -1,30 +1,39 @@
-# Driving License Management System (DVDL) : 
+#  Driving License Management System 🚗
 
-A Windows Forms-based application for the Driving & Vehicle License Department (DVLD) to manage driving license operations. The system follows a Three-Layer Architecture (Presentation, Business, Data) and utilizes ADO.NET for data access and manipulation.
+A **Windows Forms** application for the **Driving & Vehicle License Department (DVLD)** to manage driving license operations. The system follows a **Three-Layer Architecture** (Presentation, Business, Data) and utilizes **ADO.NET** for data access.
 
-## Features
-- Issue, renew, and replace driving licenses across multiple vehicle categories.
-- Manage driving tests (vision, theoretical, and practical) and schedule appointments.
-- Secure user authentication and role-based access.
-- Admin dashboard to manage license records, users, and services.
-- Efficient data management using ADO.NET for database interaction.
+## ✨ Features
+- 📜 Issue, renew, and replace driving licenses.
+- 📅 Schedule and manage driving tests (vision, theory, practical).
+- 🔐 Secure user authentication with role-based access control.
+- 🛠️ Admin dashboard for managing license records and users.
+- 💾 Efficient data management using **ADO.NET** for database access.
 
-## Technologies Used
-- **Windows Forms** for the user interface.
-- **Three-Layer Architecture** for clear separation of concerns.
-  - Presentation Layer: Handles the user interface using Windows Forms.
-  - Business Layer: Implements business logic and validations.
-  - Data Access Layer: Uses ADO.NET to interact with the SQL Server database.
-- **ADO.NET** for database connectivity and transactions.
+## 🛠️ Technologies Used
+- **Windows Forms** for the UI.
+- **Three-Layer Architecture**:
+  - Presentation Layer: Windows Forms UI.
+  - Business Layer: Business logic and validations.
+  - Data Access Layer: ADO.NET for SQL Server interaction.
+- **ADO.NET** for database connectivity.
 - **SQL Server** as the database.
 
-## Prerequisites
-- Visual Studio
-- .NET Framework
-- SQL Server
-- Git
+## 🗃️ Database Design
 
-## Installation
+The database follows a relational model to store data related to drivers, licenses, tests, and applications. The key entities include:
+
+- **Drivers**: Stores information about individuals applying for or holding licenses.
+- **Licenses**: Records the issued, renewed, or replaced licenses with details like class, issue date, and fees.
+- **Tests**: Tracks driver tests and their results.
+- **Applications**: Manages the application process for new licenses, renewals, and replacements.
+
+### Database Schema:
+
+![DVLD Database](https://github.com/user-attachments/assets/df98c72a-fc71-4605-b2f1-bb8e4439b94c)
+
+This diagram represents the schema and relationships between different entities in the system. The database ensures consistency and integrity in managing the licensing process, with clear relationships between applicants, tests, licenses, and applications.
+
+## 🚀 Installation
 
 1. **Clone the repository**:
    ```bash
@@ -41,27 +50,23 @@ A Windows Forms-based application for the Driving & Vehicle License Department (
 
 4. **Set up the database**:
    - Create a SQL Server database.
-   - Update the connection string in the `app.config` file for the Data Access Layer (DAL) to match your SQL Server instance.
-   - Use ADO.NET scripts to initialize the database.
+   - Update the connection string in the `app.config` file for the Data Access Layer (DAL).
+   - Initialize the database using ADO.NET scripts.
 
 5. **Run the application**:
    - Build the solution in Visual Studio.
-   - Run the application from the Presentation Layer (Windows Forms).
+   - Run the Windows Forms application.
 
-## Usage
 
-### Main Modules:
-- **Issue New License**: Enter applicant details and issue a new driving license.
-- **Renew License**: Renew an existing license by entering the license number.
-- **Replace License**: Handle lost or damaged licenses by issuing replacements.
-- **Manage Driving Tests**: Schedule and record results for driving tests.
-- **Search License**: Search for licenses by applicant's national ID or license number.
+## 🤝 Contributing
 
-## Contributing
-
-Contributions are welcome! Please follow the standard procedure:
+We welcome contributions! Follow these steps:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make changes and commit (`git commit -m 'Added feature'`).
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add feature'`).
 4. Push the branch (`git push origin feature-branch`).
 5. Open a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
